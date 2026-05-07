@@ -1,0 +1,178 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://w3.org">
+<html xmlns="http://w3.org" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>منيو سمكة التونة العنيدة</title>
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+</head>
+<body>
+    <div id="nav">
+        <a href="home.html">الرئيسية</a> | 
+        <a href="Meals.html">قائمة الوجبات</a> | 
+        <a href="AboutUs.html">من نحن</a>
+    </div>
+
+    <h1>🍽 منيو "سمكة التونة العنيدة"</h1>
+    
+    <table border="1" summary="قائمة الوجبات وأسعارها وتفاصيلها">
+        <thead>
+            <tr>
+                <th>الرمز</th>
+                <th>الوجبة</th>
+                <th>السعر</th>
+                <th>التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>SF-101</td>
+                <td>ستيك تونة "العنيدة" المشوي</td>
+                <td>135000</td>
+                <td><input type="checkbox" onclick="toggleDetails('d1', this)" /></td>
+                <td><input type="checkbox" class="chk-meal" value="135000" /></td>
+            </tr>
+            <tr id="d1" style="display:none;" class="detail-row">
+                <td colspan="5">
+                    <img src="images/tuna.jpg" width="120" alt="ستيك تونة" />
+                    <p><strong>المطبخ:</strong> الإيطالي | <strong>التصنيف:</strong> مأكولات بحرية</p>
+                    <p><strong>المكونات:</strong> شرائح تونة طازجة، ليمون، أعشاب، ثوم، زيت زيتون.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-102</td>
+                <td>جمبري مقرمش بصوص الخردل</td>
+                <td>150000</td>
+                <td><input type="checkbox" onclick="toggleDetails('d2', this)" /></td>
+                <td><input type="checkbox" class="chk-meal" value="150000" /></td>
+            </tr>
+            <tr id="d2" style="display:none;" class="detail-row">
+                <td colspan="5">
+                    <img src="images/shrimp.jpg" width="120" alt="جمبري مقرمش" />
+                    <p><strong>المطبخ:</strong> الآسيوي | <strong>التصنيف:</strong> مأكولات بحرية</p>
+                    <p><strong>المكونات:</strong> قريدس، بقسماط، صوص حار، مايونيز، خردل، عسل.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-103</td>
+                <td>طاجن سمك الهامور بالكريمة</td>
+                <td>120000</td>
+                <td><input type="checkbox" onclick="toggleDetails('d3', this)" /></td>
+                <td><input type="checkbox" class="chk-meal" value="120000" /></td>
+            </tr>
+            <tr id="d3" style="display:none;" class="detail-row">
+                <td colspan="5">
+                    <img src="images/fish3.jpg" width="100" alt="طاجن هامور" />
+                    <p><strong>المطبخ:</strong> العربي | <strong>التصنيف:</strong> مأكولات بحرية</p>
+                    <p><strong>المكونات:</strong> هامور، كريمة طبخ، فطر، جبنة موزاريلا، بهارات.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-104</td>
+                <td>سلطة ساشيمي التونة الحارة</td>
+                <td>95000</td>
+                <td><input type="checkbox" onclick="toggleDetails('d4', this)" /></td>
+                <td><input type="checkbox" class="chk-meal" value="95000" /></td>
+            </tr>
+            <tr id="d4" style="display:none;" class="detail-row">
+                <td colspan="5">
+                    <img src="images/salad.jpg" width="100" alt="سلطة ساشيمي" />
+                    <p><strong>المطبخ:</strong> الياباني | <strong>التصنيف:</strong> مأكولات بحرية</p>
+                    <p><strong>المكونات:</strong> تونة نيئة، أفوكادو، صوص صويا، زنجبيل، سمسم.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>SF-105</td>
+
+<td>ساندوتش عناد البحر</td>
+                <td>80000</td>
+                <td><input type="checkbox" onclick="toggleDetails('d5', this)" /></td>
+                <td><input type="checkbox" class="chk-meal" value="80000" /></td>
+            </tr>
+            <tr id="d5" style="display:none;" class="detail-row">
+                <td colspan="5">
+                    <img src="images/sub.jpg" width="100" alt="ساندوتش سمك" />
+                    <p><strong>المطبخ:</strong> الإيطالي | <strong>التصنيف:</strong> مأكولات بحرية</p>
+                    <p><strong>المكونات:</strong> فيليه سمك مقلي، كول سلو، خبز فرنسي، صوص تارتار.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+
+    <p><button type="button" onclick="showOrderForm()">متابعة الطلب</button></p>
+
+    <div id="orderForm" style="display:none; margin-top:30px; background-color:#ffffff; padding:20px; border:1px solid #ccc;">
+        <h3>إتمام عملية الشراء</h3>
+        <label>الاسم الكامل بالإنجليزية:</label><br />
+        <input type="text" id="uName" value="" /><br /><br />
+        
+        <label>رقم الحساب (6 خانات تبدأ بـ 0):</label><br />
+        <input type="text" id="uAcc" value="" /><br /><br />
+        
+        <label>تاريخ الطلب (dd-mm-yyyy):</label><br />
+        <input type="text" id="uDate" value="" /><br /><br />
+        
+        <label>رقم الموبايل:</label><br />
+        <input type="text" id="uMob" value="" /><br /><br />
+        
+        <button type="button" onclick="validateAndSend()">تأكيد وإرسال</button>
+    </div>
+
+    <script type="text/javascript">
+
+    function toggleDetails(id, chk) {
+        var row = document.getElementById(id);
+        if (row) {
+            row.style.display = chk.checked ? "table-row" : "none";
+        }
+    }
+
+    function showOrderForm() {
+        var meals = document.getElementsByClassName('chk-meal');
+        var hasSelection = false;
+        for (var i = 0; i < meals.length; i++) {
+            if (meals[i].checked) { hasSelection = true; break; }
+        }
+        if (!hasSelection) { 
+            alert("يرجى اختيار وجبة أولاً!"); 
+            return; 
+        }
+        document.getElementById("orderForm").style.display = "block";
+    }
+
+    function validateAndSend() {
+        var name = document.getElementById("uName").value;
+        var acc = document.getElementById("uAcc").value;
+        var date = document.getElementById("uDate").value;
+        var mob = document.getElementById("uMob").value;
+
+        var nameRGX = /^[a-zA-Z]+ [a-zA-Z]+$/;
+        var accRGX = /^0\d{5}$/;
+        var dateRGX = /^([0-2][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}$/;
+        var mobRGX = /^(093|098|099|094|095|096)\d{7}$/;
+
+        if(!nameRGX.test(name)) { alert("الاسم بالإنجليزية (مقطعين) فقط"); return; }
+        if(!accRGX.test(acc)) { alert("الحساب 6 أرقام يبدأ بـ 0"); return; }
+        if(!dateRGX.test(date)) { alert("التاريخ dd-mm-yyyy"); return; }
+        if(!mobRGX.test(mob)) { alert("رقم الموبايل غير صحيح"); return; }
+
+        var sum = 0;
+        var checks = document.getElementsByClassName('chk-meal');
+        for (var j = 0; j < checks.length; j++) {
+            if (checks[j].checked) {
+                sum += parseInt(checks[j].value);
+            }
+        }
+        var tax = sum * 0.1;
+        alert("المجموع: " + sum + "\nالضريبة 10%: " + tax + "\nالصافي: " + (sum + tax));
+    }
+    /* ]]> */
+    </script>
+</body>
+</html>
